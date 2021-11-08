@@ -1,0 +1,16 @@
+.flowchart__section__wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.flowchart__operateButton {
+    all: unset;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    cursor: pointer;
+}

@@ -1,0 +1,76 @@
+.wrapper { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    width: 280px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 35%);
+    &.selected {
+        box-shadow: 1px 1px 4px 3px rgb(0 102 255 / 50%);
+    }
+    &:hover > .deleteIcon {
+        opacity: 1;
+    }
+}
+
+.icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fff;
+
+    > svg {
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.title {
+    padding-top: 8px;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 6px 6px 0 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 16px;
+    min-height: 50px;
+    font-size: 13px;
+    color: #666;
+}
+
+.deleteIcon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: transparent;
+    opacity: 0;
+    transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+    cursor: pointer;
+    &:hover {
+        transform: translate(50%, -50%) scale(1.1);
+        > .deleteFill {
+            fill: #ff3b3b;
+        }
+    }
+}
